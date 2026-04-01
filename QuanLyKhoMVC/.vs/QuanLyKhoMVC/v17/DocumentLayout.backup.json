@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|f:\\congnghephattrenungdung\\quanlykhomvc\\views\\vattus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|solutionrelative:views\\vattus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|f:\\congnghephattrenungdung\\quanlykhomvc\\controllers\\vattuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|solutionrelative:controllers\\vattuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|f:\\congnghephattrenungdung\\quanlykhomvc\\models\\vattu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|solutionrelative:models\\vattu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|f:\\congnghephattrenungdung\\quanlykhomvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|f:\\congnghephattrenungdung\\quanlykhomvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|f:\\congnghephattrenungdung\\quanlykhomvc\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|solutionrelative:models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|f:\\congnghephattrenungdung\\quanlykhomvc\\migrations\\20260330211541_khoitaolai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|solutionrelative:migrations\\20260330211541_khoitaolai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|f:\\congnghephattrenungdung\\quanlykhomvc\\migrations\\20260330210658_khoitaomvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869B0291-5151-4C0F-94E3-57BD5492027B}|QuanLyKhoMVC.csproj|solutionrelative:migrations\\20260330210658_khoitaomvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VatTusController.cs",
+              "DocumentMoniker": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Controllers\\VatTusController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VatTusController.cs",
+              "ToolTip": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Controllers\\VatTusController.cs",
+              "RelativeToolTip": "Controllers\\VatTusController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAwwEMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T21:06:22.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T21:29:13.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Views\\VatTus\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\VatTus\\Index.cshtml",
+              "ToolTip": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Views\\VatTus\\Index.cshtml",
+              "RelativeToolTip": "Views\\VatTus\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-30T21:28:37.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20260330211541_KhoiTaoLai.cs",
+              "DocumentMoniker": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Migrations\\20260330211541_KhoiTaoLai.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260330211541_KhoiTaoLai.cs",
+              "ToolTip": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Migrations\\20260330211541_KhoiTaoLai.cs",
+              "RelativeToolTip": "Migrations\\20260330211541_KhoiTaoLai.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T21:15:41.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20260330210658_KhoiTaoMVC.cs",
+              "DocumentMoniker": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Migrations\\20260330210658_KhoiTaoMVC.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260330210658_KhoiTaoMVC.cs",
+              "ToolTip": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Migrations\\20260330210658_KhoiTaoMVC.cs",
+              "RelativeToolTip": "Migrations\\20260330210658_KhoiTaoMVC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T21:06:58.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T21:01:02.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VatTu.cs",
+              "DocumentMoniker": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Models\\VatTu.cs",
+              "RelativeDocumentMoniker": "Models\\VatTu.cs",
+              "ToolTip": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Models\\VatTu.cs",
+              "RelativeToolTip": "Models\\VatTu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T20:58:59.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\AppDbContext.cs",
+              "ToolTip": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "Models\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T21:00:20.792Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
