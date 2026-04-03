@@ -1,0 +1,3 @@
+@using WMSPro.Models
+@using WMSPro.Services
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

@@ -1,0 +1,2 @@
+wwwroot\css\wms.css
+wwwroot\js\wms.js

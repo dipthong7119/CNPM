@@ -1,0 +1,61 @@
+@model WMSPro.Models.ViTri
+@{
+    ViewData["Title"] = "Thêm vị trí kho";
+    ViewData["SubTitle"] = "Quản lý vị trí lưu trữ";
+}
+<div class="card" style="max-width:700px">
+    <div class="card-header"><div class="card-title">📍 Thêm vị trí kho mới</div></div>
+    <form asp-action="Tao" method="post">
+        <div class="form-grid">
+            <div class="form-group">
+                <label class="form-label">Mã vị trí * (VD: A1-01, B2-03)</label>
+                <input class="form-input" asp-for="MaViTri" placeholder="VD: A1-07" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Loại kệ</label>
+                <select class="form-select" asp-for="Loai">
+                    <option>Kệ đứng</option>
+                    <option>Kệ nặng</option>
+                    <option>Kệ nhỏ</option>
+                    <option>Kệ lạnh</option>
+                    <option>Sàn</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Sức chứa</label>
+                <select class="form-select" asp-for="SucChua">
+                    <option>50 kg</option>
+                    <option>100 kg</option>
+                    <option>200 kg</option>
+                    <option>500 kg</option>
+                    <option>1000 kg</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Tình trạng ban đầu</label>
+                <select class="form-select" asp-for="TinhTrang">
+                    <option>Trống</option>
+                    <option>Một phần</option>
+                    <option>Đầy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Kho</label>
+                <select class="form-select" asp-for="MaKho">
+                    @foreach (var kho in ViewBag.DanhSachKho as List<WMSPro.Models.Kho> ?? new())
+                    {
+                        <option value="@kho.MaKho">@kho.TenKho</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Mặt hàng (nếu đã có)</label>
+                <input class="form-input" asp-for="MatHang" placeholder="Tên mặt hàng hoặc để trống" />
+            </div>
+        </div>
+        <div class="form-actions">
+            <a href="/ViTriKho" class="btn btn-secondary">Hủy bỏ</a>
+            <button type="submit" class="btn btn-primary">💾 Lưu vị trí</button>
+        </div>
+    </form>
+</div>

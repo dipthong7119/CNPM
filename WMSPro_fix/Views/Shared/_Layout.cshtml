@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>@ViewData["Title"] - WMS Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="~/css/wms.css" />
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar-logo">
+        <div class="logo-icon">📦</div>
+        <div>
+            <div class="logo-text">WMS Pro</div>
+            <div class="logo-sub">Hệ thống Quản lý Kho</div>
+        </div>
+    </div>
+    <nav class="sidebar-nav">
+        <div class="nav-section">
+            <div class="nav-label">Tổng quan</div>
+            <a href="/Home/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="Home"?"active":"")">
+                <span class="nav-icon">🏠</span> Trang chủ
+            </a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-label">Nghiệp vụ</div>
+            <a href="/NhapKho/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="NhapKho"?"active":"")">
+                <span class="nav-icon">📥</span> Nhập kho
+            </a>
+            <a href="/XuatKho/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="XuatKho"?"active":"")">
+                <span class="nav-icon">📤</span> Xuất kho
+            </a>
+            <a href="/TonKho/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="TonKho"?"active":"")">
+                <span class="nav-icon">📊</span> Tồn kho
+            </a>
+            <a href="/ViTriKho/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="ViTriKho"?"active":"")">
+                <span class="nav-icon">🗺️</span> Vị trí kho
+            </a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-label">Quản lý</div>
+            <a href="/VatTu/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="VatTu"?"active":"")">
+                <span class="nav-icon">🔧</span> Quản lý vật tư
+            </a>
+            <a href="/QuanLyKho/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="QuanLyKho"?"active":"")">
+                <span class="nav-icon">🏭</span> Quản lý kho
+            </a>
+            <a href="/NhaCungCap/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="NhaCungCap"?"active":"")">
+                <span class="nav-icon">🤝</span> Nhà cung cấp
+            </a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-label">Theo dõi</div>
+            <a href="/CanhBao/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="CanhBao"?"active":"")">
+                <span class="nav-icon">🔔</span> Cảnh báo
+                <span class="nav-badge">@WMSPro.Services.WmsData.DanhSachVatTu.Count(v => v.SoLuongTon <= v.MucTonToiThieu)</span>
+            </a>
+            <a href="/BaoCao/Index" class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString()=="BaoCao"?"active":"")">
+                <span class="nav-icon">📋</span> Báo cáo
+            </a>
+        </div>
+        <div class="nav-section">
+            <div class="nav-label">Hệ thống</div>
+            <a href="/Account/Logout" class="nav-item">
+                <span class="nav-icon">🚪</span> Đăng xuất
+            </a>
+        </div>
+    </nav>
+    <div class="sidebar-footer">
+        <div class="user-avatar">@((Context.Session.GetString("HoTen") ?? "QK").Length >= 2 ? (Context.Session.GetString("HoTen") ?? "QK").Substring(0,2) : (Context.Session.GetString("HoTen") ?? "QK"))</div>
+        <div class="user-info">
+            <div class="user-name">@(Context.Session.GetString("HoTen") ?? "Quản Lý Kho")</div>
+            <div class="user-role">@(Context.Session.GetString("VaiTro") ?? "Administrator")</div>
+        </div>
+    </div>
+</aside>
+
+<div class="main">
+    <header class="topbar">
+        <div>
+            <div class="page-title">@ViewData["Title"]</div>
+            <div class="page-sub">@ViewData["SubTitle"]</div>
+        </div>
+        <div class="topbar-actions">
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" id="globalSearch" placeholder="Tìm kiếm hàng hóa, phiếu..." />
+            </div>
+            <div class="icon-btn notif-dot" title="Thông báo">🔔</div>
+            <div class="icon-btn" title="Cài đặt">⚙️</div>
+        </div>
+    </header>
+
+    <div class="content">
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert-success">✅ @TempData["Success"]</div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert-error">❌ @TempData["Error"]</div>
+        }
+        @RenderBody()
+    </div>
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+<script src="~/js/wms.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

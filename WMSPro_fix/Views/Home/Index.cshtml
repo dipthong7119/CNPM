@@ -1,0 +1,134 @@
+@model WMSPro.Models.DashboardViewModel
+@{
+    ViewData["Title"] = "Trang chủ";
+    ViewData["SubTitle"] = "Tổng quan hoạt động kho";
+}
+
+<div class="stat-grid">
+    <div class="stat-card green">
+        <div class="stat-label">Tổng tồn kho</div>
+        <div class="stat-val green">@Model.TongTonKho.ToString("N0")</div>
+        <div class="stat-sub">▲ 340 so với tháng trước</div>
+        <div class="stat-icon">📦</div>
+    </div>
+    <div class="stat-card blue">
+        <div class="stat-label">Nhập kho hôm nay</div>
+        <div class="stat-val blue">@Model.NhapKhoHomNay</div>
+        <div class="stat-sub">5 phiếu đã xử lý</div>
+        <div class="stat-icon">📥</div>
+    </div>
+    <div class="stat-card yellow">
+        <div class="stat-label">Xuất kho hôm nay</div>
+        <div class="stat-val yellow">@Model.XuatKhoHomNay</div>
+        <div class="stat-sub">7 phiếu đã xử lý</div>
+        <div class="stat-icon">📤</div>
+    </div>
+    <div class="stat-card red">
+        <div class="stat-label">Cảnh báo tồn kho</div>
+        <div class="stat-val red">@Model.SoCanhBao</div>
+        <div class="stat-sub">Hàng sắp hết &amp; tồn lâu</div>
+        <div class="stat-icon">⚠️</div>
+    </div>
+</div>
+
+<div class="dash-grid">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">⚡ Hoạt động gần đây</div>
+            <a href="/NhapKho" class="btn btn-secondary btn-sm">Xem tất cả</a>
+        </div>
+        <table class="table">
+            <thead><tr><th>Số phiếu</th><th>Loại</th><th>Mặt hàng</th><th>SL</th><th>Trạng thái</th></tr></thead>
+            <tbody>
+                @foreach (var item in Model.HoatDongGanDay.Take(5))
+                {
+                    var loaiUrl = item.LoaiPhieu == "Nhập"   ?  "NhapKho" : "XuatKho";
+                    var badgeColor = item.LoaiPhieu == "Nhập"  ?  "badge-blue" : "badge-orange";
+                    var soLuongColor = item.SoLuong > 0 ? "text-green" : "text-danger";
+                    var soLuongText = item.SoLuong > 0 ? ("+" + item.SoLuong.ToString()) : item.SoLuong.ToString();
+                    var trangThaiClass = item.TrangThai == "Hoàn thành" ? "badge-green" : 
+                                        item.TrangThai == "Đang xử lý" ? "badge-yellow" :
+                                        item.TrangThai == "Đang soạn" ? "badge-yellow" : "badge-gray";
+                    var trangThaiIcon = item.TrangThai == "Hoàn thành" ? "✓" : 
+                                       item.TrangThai == "Đang xử lý" ? "⏳" :
+                                       item.TrangThai == "Đang soạn" ? "⏳" : "⏸";
+                    <tr>
+                        <td><a class="link" href="/@loaiUrl/Xem/@item.SoPhieu">@item.SoPhieu</a></td>
+                        <td><span class="badge @badgeColor">@item.LoaiPhieu</span></td>
+                        <td>@item.TenHang</td>
+                        <td class="@soLuongColor">@soLuongText</td>
+                        <td><span class="badge @trangThaiClass">@trangThaiIcon @item.TrangThai</span></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">📈 Biểu đồ nhập xuất 7 ngày</div>
+        </div>
+        <div class="chart-area">
+            <div class="bar-chart" id="barChart"></div>
+            <div class="chart-legend">
+                <span class="legend-item"><span class="dot green"></span> Nhập kho</span>
+                <span class="legend-item"><span class="dot cyan"></span> Xuất kho</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">🔔 Cảnh báo tồn kho</div>
+            <a href="/CanhBao" class="btn btn-secondary btn-sm">Tất cả</a>
+        </div>
+        @foreach (var cb in Model.DanhSachCanhBao)
+        {
+            <div class="alert-item @(cb.Loai=="sap-het"?"danger":"warning")">
+                <div class="alert-icon">@(cb.Loai=="sap-het"?"🔴":"⚠️")</div>
+                <div style="flex:1">
+                    <div class="alert-title">@cb.TenHang</div>
+                    <div class="alert-desc">@cb.MoTa</div>
+                </div>
+                <div class="alert-time">@cb.ThoiGian</div>
+            </div>
+        }
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">📊 Mức tồn kho các mặt hàng chính</div>
+        </div>
+        @foreach (var item in Model.DanhSachTonKho)
+        {
+            var max = Math.Max(item.MucTonToiThieu * 5, item.SoLuongTon + 10);
+            var pct = (int)Math.Min((double)item.SoLuongTon / max * 100, 100);
+            <div class="stock-bar-row">
+                <span class="stock-name">@item.TenVatTu</span>
+                <div class="stock-bar-wrap">
+                    <div class="stock-bar @item.TrangThai" style="width:@pct%"></div>
+                </div>
+                <span class="stock-val @item.TrangThai">@item.SoLuongTon / @max</span>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+<script>
+const chartData = [
+    {label:'T2',in:180,out:120},{label:'T3',in:240,out:160},
+    {label:'T4',in:90,out:200},{label:'T5',in:310,out:140},
+    {label:'T6',in:270,out:230},{label:'T7',in:50,out:80},
+    {label:'CN',in:20,out:30}
+];
+const maxVal = Math.max(...chartData.flatMap(d=>[d.in,d.out]));
+const chart = document.getElementById('barChart');
+chartData.forEach(d=>{
+    chart.innerHTML+=`<div class="bar-wrap">
+        <div class="bar in" style="height:${(d.in/maxVal)*85}px" title="Nhập:${d.in}"></div>
+        <div class="bar out" style="height:${(d.out/maxVal)*85}px" title="Xuất:${d.out}"></div>
+        <div class="bar-label">${d.label}</div></div>`;
+});
+</script>
+}

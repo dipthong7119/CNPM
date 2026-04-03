@@ -1,0 +1,45 @@
+@model List<WMSPro.Models.NhaCungCap>
+@{
+    ViewData["Title"] = "Nhà cung cấp";
+    ViewData["SubTitle"] = "Quản lý thông tin nhà cung cấp";
+}
+<div class="page-actions-bar">
+    <form method="get" style="display:flex;gap:8px">
+        <div class="search-box" style="width:260px">
+            <span>🔍</span>
+            <input type="text" name="q" value="@ViewBag.Q" placeholder="Tìm tên, mã, SĐT..." />
+        </div>
+        <button type="submit" class="btn btn-secondary btn-sm">Tìm kiếm</button>
+    </form>
+    <a href="/NhaCungCap/Tao" class="btn btn-primary">+ Thêm nhà cung cấp</a>
+</div>
+<div class="card">
+    <div class="card-header"><div class="card-title">🤝 Danh sách nhà cung cấp (@Model.Count)</div></div>
+    <table class="table">
+        <thead>
+            <tr><th>Mã NCC</th><th>Tên nhà cung cấp</th><th>Địa chỉ</th><th>Số điện thoại</th><th>Email</th><th>Thao tác</th></tr>
+        </thead>
+        <tbody>
+        @foreach (var ncc in Model)
+        {
+            <tr>
+                <td><a class="link" href="/NhaCungCap/Xem/@ncc.MaNhaCungCap">@ncc.MaNhaCungCap</a></td>
+                <td style="font-weight:600">@ncc.TenNhaCungCap</td>
+                <td>@ncc.DiaChi</td>
+                <td>@ncc.SoDienThoai</td>
+                <td>@ncc.Email</td>
+                <td>
+                    <div class="action-btns">
+                        <a class="btn-icon" href="/NhaCungCap/Xem/@ncc.MaNhaCungCap" title="Xem">👁️</a>
+                        <a class="btn-icon" href="/NhaCungCap/Sua/@ncc.MaNhaCungCap" title="Sửa">✏️</a>
+                        <form method="post" action="/NhaCungCap/Xoa/@ncc.MaNhaCungCap" style="display:inline"
+                              onsubmit="return confirm('Xóa nhà cung cấp @ncc.TenNhaCungCap?')">
+                            <button type="submit" class="btn-icon btn-icon-danger" title="Xóa">🗑️</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,88 @@
+@model WMSPro.Models.VatTu
+@{
+    ViewData["Title"] = "Thêm vật tư mới";
+    ViewData["SubTitle"] = "Quản lý vật tư";
+}
+<div class="card" style="max-width:900px">
+    <div class="card-header"><div class="card-title">🔧 Thêm vật tư mới</div></div>
+    <form asp-action="Tao" method="post">
+        <div class="form-grid">
+            <div class="form-group">
+                <label class="form-label">Mã vật tư</label>
+                <input class="form-input" asp-for="MaVatTu" readonly />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Tên vật tư *</label>
+                <input class="form-input" asp-for="TenVatTu" placeholder="Tên vật tư" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Loại vật tư</label>
+                <select class="form-select" asp-for="LoaiVatTu">
+                    <option value="">-- Chọn loại --</option>
+                    <option>Điện tử</option>
+                    <option>Phụ kiện</option>
+                    <option>Linh kiện</option>
+                    <option>Thiết bị</option>
+                    <option>Khác</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Đơn vị tính</label>
+                <select class="form-select" asp-for="DonViTinh">
+                    <option>cái</option><option>chiếc</option><option>bộ</option>
+                    <option>hộp</option><option>kg</option><option>m</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Số lượng tồn ban đầu</label>
+                <input class="form-input" asp-for="SoLuongTon" type="number" min="0" value="0" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Mức tồn tối thiểu</label>
+                <input class="form-input" asp-for="MucTonToiThieu" type="number" min="0" value="10" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Nhà cung cấp</label>
+                <select class="form-select" asp-for="MaNhaCungCap">
+                    <option value="">-- Chọn nhà cung cấp --</option>
+                    @foreach (var ncc in ViewBag.DanhSachNCC as List<WMSPro.Models.NhaCungCap> ?? new())
+                    {
+                        <option value="@ncc.MaNhaCungCap">@ncc.TenNhaCungCap</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Kho lưu trữ</label>
+                <select class="form-select" asp-for="MaKho">
+                    <option value="">-- Chọn kho --</option>
+                    @foreach (var kho in ViewBag.DanhSachKho as List<WMSPro.Models.Kho> ?? new())
+                    {
+                        <option value="@kho.MaKho">@kho.TenKho</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Vị trí lưu trữ</label>
+                <select class="form-select" asp-for="MaViTri">
+                    <option value="">-- Chọn vị trí --</option>
+                    @foreach (var vt in ViewBag.DanhSachViTri as List<WMSPro.Models.ViTri> ?? new())
+                    {
+                        <option value="@vt.MaViTri">@vt.MaViTri (@vt.TinhTrang - @vt.SucChua)</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Mã lô</label>
+                <input class="form-input" asp-for="MaLo" placeholder="VD: LOT-2024-001" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Số seri</label>
+                <input class="form-input" asp-for="SoSeri" placeholder="VD: SN-001" />
+            </div>
+        </div>
+        <div class="form-actions">
+            <a href="/VatTu" class="btn btn-secondary">Hủy bỏ</a>
+            <button type="submit" class="btn btn-primary">💾 Lưu vật tư</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,117 @@
+@model List<WMSPro.Models.ViTri>
+@{
+    ViewData["Title"] = "Vị trí kho";
+    ViewData["SubTitle"] = "Sơ đồ kho và quản lý vị trí lưu trữ";
+    var dsKho = ViewBag.DanhSachKho as List<WMSPro.Models.Kho> ?? new();
+    var maKho = ViewBag.MaKho as string ?? "KHO-A";
+    var rows = new[] { "A","B","C","D","E","F" };
+    var cellStates = new Dictionary<string,string>
+    {
+        {"A1","full"},{"A2","full"},{"A3","partial"},{"A4","empty"},{"A5","full"},{"A6","full"},
+        {"B1","full"},{"B2","partial"},{"B3","empty"},{"B4","full"},{"B5","partial"},{"B6","full"},
+        {"C1","empty"},{"C2","full"},{"C3","full"},{"C4","full"},{"C5","empty"},{"C6","partial"},
+        {"D1","full"},{"D2","full"},{"D3","partial"},{"D4","full"},{"D5","full"},{"D6","empty"},
+        {"E1","empty"},{"E2","partial"},{"E3","full"},{"E4","empty"},{"E5","full"},{"E6","full"},
+        {"F1","full"},{"F2","empty"},{"F3","full"},{"F4","partial"},{"F5","full"},{"F6","full"},
+    };
+    foreach (var vt in Model)
+    {
+        var parts = vt.MaViTri.Split('-');
+        if (parts.Length >= 2)
+        {
+            var rowChar = parts[0].Substring(0,1);
+            var colChar = parts[1].TrimStart('0');
+            var key = rowChar + colChar;
+            var st = vt.TinhTrang == "Đầy" ? "full" : vt.TinhTrang == "Một phần" ? "partial" : "empty";
+            cellStates[key] = st;
+        }
+    }
+}
+
+<div class="page-actions-bar">
+    <div class="filter-row">
+        @foreach (var kho in dsKho)
+        {
+            <a href="/ViTriKho?maKho=@kho.MaKho" class="chip @(kho.MaKho==maKho?"active":"")">🏭 @kho.TenKho</a>
+        }
+    </div>
+    <a href="/ViTriKho/Tao" class="btn btn-primary">+ Thêm vị trí</a>
+</div>
+
+<div class="vitri-layout">
+    <div class="card vitri-map-card">
+        <div class="card-header">
+            <div class="card-title">🗺️ Sơ đồ kho — @maKho</div>
+            <div class="legend-row">
+                <span class="legend-cell full">Đầy</span>
+                <span class="legend-cell partial">Một phần</span>
+                <span class="legend-cell empty">Trống</span>
+            </div>
+        </div>
+        <div class="shelf-label">Kệ — Hàng 1 đến 6</div>
+        <div class="warehouse-map">
+            @foreach (var row in rows)
+            {
+                for (int col = 1; col <= 6; col++)
+                {
+                    var key = $"{row}{col}";
+                    var state = cellStates.ContainsKey(key) ? cellStates[key] : "empty";
+                    var label = $"{row}{col}";
+                    <div class="shelf-cell @state" title="Vị trí @label" onclick="showCellInfo('@label','@state')">@label</div>
+                }
+            }
+        </div>
+        <div style="margin-top:14px;padding:10px;background:var(--bg3);border-radius:8px;font-size:12px;color:var(--text2)">
+            📊 Tổng: @Model.Count vị trí |
+            Đầy: <span style="color:var(--accent)">@Model.Count(v=>v.TinhTrang=="Đầy")</span> |
+            Một phần: <span style="color:var(--accent3)">@Model.Count(v=>v.TinhTrang=="Một phần")</span> |
+            Trống: <span style="color:var(--text2)">@Model.Count(v=>v.TinhTrang=="Trống")</span>
+        </div>
+    </div>
+
+    <div class="card vitri-list-card">
+        <div class="card-header">
+            <div class="card-title">📋 Danh sách vị trí (@Model.Count)</div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr><th>Mã vị trí</th><th>Loại</th><th>Sức chứa</th><th>Tình trạng</th><th>Mặt hàng</th><th>Thao tác</th></tr>
+            </thead>
+            <tbody>
+            @foreach (var vt in Model)
+            {
+                <tr>
+                    <td><span class="link">@vt.MaViTri</span></td>
+                    <td>@vt.Loai</td>
+                    <td>@vt.SucChua</td>
+                    <td>
+                        @if (vt.TinhTrang=="Đầy") { <span class="badge badge-green">@vt.TinhTrang</span> }
+                        else if (vt.TinhTrang=="Một phần") { <span class="badge badge-yellow">@vt.TinhTrang</span> }
+                        else { <span class="badge badge-gray">@vt.TinhTrang</span> }
+                    </td>
+                    <td>@vt.MatHang</td>
+                    <td>
+                        <div class="action-btns">
+                            <a class="btn-icon" href="/ViTriKho/Sua/@vt.MaViTri" title="Sửa">✏️</a>
+                            <form method="post" action="/ViTriKho/Xoa/@vt.MaViTri" style="display:inline"
+                                  onsubmit="return confirm('Xóa vị trí @vt.MaViTri?')">
+                                <button type="submit" class="btn-icon btn-icon-danger" title="Xóa">🗑️</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+function showCellInfo(label, state) {
+    const names = {full:'Đầy hàng',partial:'Còn chỗ trống',empty:'Trống hoàn toàn'};
+    const type = state==='empty'?'info':state==='full'?'success':'warning';
+    showToast(`Vị trí ${label}: ${names[state]||state}`, type);
+}
+</script>
+}

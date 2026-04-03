@@ -1,0 +1,18 @@
+@model WMSPro.Models.Kho
+@{ ViewData["Title"] = "Thêm kho mới"; ViewData["SubTitle"] = "Quản lý kho"; }
+<div class="card" style="max-width:700px">
+    <div class="card-header"><div class="card-title">🏭 Thêm kho mới</div></div>
+    <form asp-action="Tao" method="post">
+        <div class="form-grid">
+            <div class="form-group"><label class="form-label">Mã kho</label><input class="form-input" asp-for="MaKho" readonly /></div>
+            <div class="form-group"><label class="form-label">Tên kho *</label><input class="form-input" asp-for="TenKho" placeholder="VD: Kho A - Điện tử" /></div>
+            <div class="form-group"><label class="form-label">Địa điểm</label><input class="form-input" asp-for="DiaDiem" placeholder="VD: Tầng 1, Tòa nhà A" /></div>
+            <div class="form-group"><label class="form-label">Người phụ trách</label><input class="form-input" asp-for="NguoiPhuTrach" placeholder="Tên người phụ trách" /></div>
+            <div class="form-group form-full"><label class="form-label">Ghi chú</label><input class="form-input" asp-for="GhiChu" placeholder="Ghi chú thêm..." /></div>
+        </div>
+        <div class="form-actions">
+            <a href="/QuanLyKho" class="btn btn-secondary">Hủy bỏ</a>
+            <button type="submit" class="btn btn-primary">💾 Lưu kho</button>
+        </div>
+    </form>
+</div>
