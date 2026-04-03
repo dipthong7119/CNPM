@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuanLyKhoMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+595875c49db9d7a7c09514071afbedb5272e150b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4a028ecf8d396a6ba0804ac027688e38d102d95")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuanLyKhoMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuanLyKhoMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

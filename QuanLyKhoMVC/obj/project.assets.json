@@ -7317,11 +7317,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\CNPM\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
+      "projectUniqueName": "E:\\CNPMA\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
       "projectName": "QuanLyKhoMVC",
-      "projectPath": "E:\\CNPM\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
+      "projectPath": "E:\\CNPMA\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
       "packagesPath": "C:\\Users\\Dipthong\\.nuget\\packages\\",
-      "outputPath": "E:\\CNPM\\QuanLyKhoMVC\\obj\\",
+      "outputPath": "E:\\CNPMA\\QuanLyKhoMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

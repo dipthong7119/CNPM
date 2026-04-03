@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hh//VbkVAEg=",
+  "dgSpecHash": "Q3ZZ/9/DciE=",
   "success": true,
-  "projectFilePath": "E:\\CNPM\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
+  "projectFilePath": "E:\\CNPMA\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dipthong\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Dipthong\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
