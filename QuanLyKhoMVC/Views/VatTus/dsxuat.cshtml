@@ -1,0 +1,24 @@
+﻿@model IEnumerable<QuanLyKhoMVC.Models.VatTu>
+
+<h2 class="text-danger">Báo Cáo Vật Tư Đã Xuất</h2>
+
+<table class="table table-bordered shadow-sm">
+    <thead class="table-dark">
+        <tr>
+            <th>Tên Vật Tư</th>
+            <th>Vị Trí</th>
+            <th class="text-center">Tổng Đã Xuất</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>@item.TenVatTu</td>
+                <td>@item.ViTri</td>
+                <td class="text-center">
+                    <span class="badge bg-warning text-dark">@item.SoLuongDaXuat</span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

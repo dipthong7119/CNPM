@@ -7311,23 +7311,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SungRua\\.nuget\\packages\\": {},
+    "C:\\Users\\Dipthong\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
+      "projectUniqueName": "E:\\CNPM\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
       "projectName": "QuanLyKhoMVC",
-      "projectPath": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
-      "packagesPath": "C:\\Users\\SungRua\\.nuget\\packages\\",
-      "outputPath": "F:\\congnghephattrenungdung\\QuanLyKhoMVC\\obj\\",
+      "projectPath": "E:\\CNPM\\QuanLyKhoMVC\\QuanLyKhoMVC.csproj",
+      "packagesPath": "C:\\Users\\Dipthong\\.nuget\\packages\\",
+      "outputPath": "E:\\CNPM\\QuanLyKhoMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\SungRua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dipthong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7394,7 +7394,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

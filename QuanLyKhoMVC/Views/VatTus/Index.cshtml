@@ -25,7 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if (Model != null)
+                    @if (Model != null)   
                     {
                         foreach (var item in Model)
                         {
@@ -40,13 +40,12 @@
                                 <td>@item.ViTri</td>
                                 <td class="text-center">
                                     <a href="/VatTus/Edit/@item.MaVatTu" class="btn btn-sm btn-outline-warning">Sửa</a>
-                                    <a href="/VatTus/Delete/@item.MaVatTu" class="btn btn-sm btn-outline-danger">Xóa</a>
+                                    <a href="/VatTus/Delete/@item.MaVatTu" class="btn btn-sm btn-outline-danger">Xuất</a>
                                 </td>
                             </tr>
                         }
                     }
                 </tbody>
-                }
             </table>
         </div>
     </div>

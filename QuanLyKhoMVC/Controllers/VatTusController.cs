@@ -141,23 +141,63 @@ namespace QuanLyKhoMVC.Controllers
         }
 
         // POST: VatTus/Delete/5
+        //    [HttpPost, ActionName("Delete")]
+        //    [ValidateAntiForgeryToken]
+        //    public async Task<IActionResult> DeleteConfirmed(string id, int soLuongXuat)
+        //    {
+        //        // Tìm vật tư trong Database dựa vào mã (id)
+        //        var vatTu = await _context.DanhSachVatTu.FindAsync(id);
+
+        //        if (vatTu != null)
+        //        {
+        //            // Kiểm tra logic: chỉ trừ nếu số lượng xuất hợp lệ
+        //            if (soLuongXuat > 0 && soLuongXuat <= vatTu.SoLuong)
+        //            {
+        //                // THAY THẾ lệnh Remove bằng phép trừ
+        //                vatTu.SoLuong -= soLuongXuat;
+
+        //                // Cập nhật lại vào Database
+        //                _context.Update(vatTu);
+        //                await _context.SaveChangesAsync();
+        //            }
+        //            else if (soLuongXuat > vatTu.SoLuong)
+        //            {
+        //                // Nếu nhập quá số lượng, bạn có thể thêm thông báo lỗi ở đây nếu muốn
+        //                // Tạm thời mình cho quay về Index để tránh lỗi crash
+        //                return RedirectToAction(nameof(Index));
+        //            }
+        //        }
+
+        //        return RedirectToAction(nameof(Index));
+        //    }
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(string id, int soLuongXuat)
         {
             var vatTu = await _context.DanhSachVatTu.FindAsync(id);
-            if (vatTu != null)
+            if (vatTu != null && soLuongXuat <= vatTu.SoLuong)
             {
-                _context.DanhSachVatTu.Remove(vatTu);
-            }
+                // 1. Trừ tồn kho hiện tại
+                vatTu.SoLuong -= soLuongXuat;
 
-            await _context.SaveChangesAsync();
+                // 2. Cộng dồn vào cột Đã Xuất
+                vatTu.SoLuongDaXuat += soLuongXuat;
+
+                _context.Update(vatTu);
+                await _context.SaveChangesAsync();
+            }
             return RedirectToAction(nameof(Index));
         }
-
         private bool VatTuExists(string id)
         {
             return _context.DanhSachVatTu.Any(e => e.MaVatTu == id);
         }
+        public async Task<IActionResult> dsxuat()
+        {
+            // Chỉ lấy những thằng nào đã từng xuất (SoLuongDaXuat > 0)
+            var list = await _context.DanhSachVatTu.Where(x => x.SoLuongDaXuat > 0).ToListAsync();
+            return View(list);
+        }
     }
+   
 }

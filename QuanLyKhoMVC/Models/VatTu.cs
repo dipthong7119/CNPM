@@ -9,5 +9,6 @@ namespace QuanLyKhoMVC.Models
         public string TenVatTu { get; set; } = string.Empty;
         public int SoLuong { get; set; }
         public string ViTri { get; set; } = string.Empty;
+        public int SoLuongDaXuat { get; set; } = 0; // Mặc định ban đầu là 0
     }
 }

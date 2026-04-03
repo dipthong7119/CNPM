@@ -31,9 +31,25 @@
         </dd>
     </dl>
     
+    <h3>Xuất kho vật tư</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Tên vật tư:</dt>
+        <dd class="col-sm-9">@Model.TenVatTu</dd>
+        <dt class="col-sm-3">Số lượng hiện tại:</dt>
+        <dd class="col-sm-9">@Model.SoLuong</dd>
+    </dl>
     <form asp-action="Delete">
         <input type="hidden" asp-for="MaVatTu" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        
+        <div class="form-group mb-3">
+            <label class="control-label">Nhập số lượng muốn xuất:</label>
+            <input type="number" name="soLuongXuat" class="form-control" min="1" max="@Model.SoLuong" value="1" required />
+        </div>
+
+        <button type="submit" class="btn btn-warning">Xác nhận Xuất</button> |
+        <a asp-action="Index">Quay lại danh sách</a>
     </form>
+</div>
 </div>

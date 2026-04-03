@@ -29,6 +29,9 @@ namespace QuanLyKhoMVC.Migrations
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
+                    b.Property<int>("SoLuongDaXuat")
+                        .HasColumnType("int");
+
                     b.Property<string>("TenVatTu")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
