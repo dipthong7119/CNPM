@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\WMSPro_fix\\",
+  "WorkspaceRootPath": "F:\\CNPM\\WMSPro_fix\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|e:\\wmspro_fix\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|f:\\cnpm\\wmspro_fix\\wwwroot\\css\\wms.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:wwwroot\\css\\wms.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|e:\\wmspro_fix\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|e:\\wmspro_fix\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|f:\\cnpm\\wmspro_fix\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|e:\\wmspro_fix\\services\\wmsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:services\\wmsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|f:\\cnpm\\wmspro_fix\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|e:\\wmspro_fix\\models\\wmsmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|f:\\cnpm\\wmspro_fix\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|f:\\cnpm\\wmspro_fix\\controllers\\nhacungcapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:controllers\\nhacungcapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|f:\\cnpm\\wmspro_fix\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|f:\\cnpm\\wmspro_fix\\models\\wmsmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:models\\wmsmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|f:\\cnpm\\wmspro_fix\\services\\wmsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3B540C5-C127-50EB-FB68-5BD2F3BF1AAE}|WMSPro.csproj|solutionrelative:services\\wmsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,59 +47,101 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "wms.css",
+              "DocumentMoniker": "F:\\CNPM\\WMSPro_fix\\wwwroot\\css\\wms.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\wms.css",
+              "ToolTip": "F:\\CNPM\\WMSPro_fix\\wwwroot\\css\\wms.css",
+              "RelativeToolTip": "wwwroot\\css\\wms.css",
+              "ViewState": "AgIAADwEAAAAAAAAAAAYwBIFAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-04T02:25:50.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\CNPM\\WMSPro_fix\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "F:\\CNPM\\WMSPro_fix\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T02:25:24.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NhaCungCapController.cs",
+              "DocumentMoniker": "F:\\CNPM\\WMSPro_fix\\Controllers\\NhaCungCapController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NhaCungCapController.cs",
+              "ToolTip": "F:\\CNPM\\WMSPro_fix\\Controllers\\NhaCungCapController.cs",
+              "RelativeToolTip": "Controllers\\NhaCungCapController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T02:23:55.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\WMSPro_fix\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "F:\\CNPM\\WMSPro_fix\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "E:\\WMSPro_fix\\Controllers\\HomeController.cs",
+              "ToolTip": "F:\\CNPM\\WMSPro_fix\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAgwCoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-03T17:41:58.98Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "WmsData.cs",
-              "DocumentMoniker": "E:\\WMSPro_fix\\Services\\WmsData.cs",
+              "DocumentMoniker": "F:\\CNPM\\WMSPro_fix\\Services\\WmsData.cs",
               "RelativeDocumentMoniker": "Services\\WmsData.cs",
-              "ToolTip": "E:\\WMSPro_fix\\Services\\WmsData.cs",
+              "ToolTip": "F:\\CNPM\\WMSPro_fix\\Services\\WmsData.cs",
               "RelativeToolTip": "Services\\WmsData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T17:38:20.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\WMSPro_fix\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\WMSPro_fix\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-03T17:34:59.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WmsModels.cs",
-              "DocumentMoniker": "E:\\WMSPro_fix\\Models\\WmsModels.cs",
-              "RelativeDocumentMoniker": "Models\\WmsModels.cs",
-              "ToolTip": "E:\\WMSPro_fix\\Models\\WmsModels.cs",
-              "RelativeToolTip": "Models\\WmsModels.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAA9wGUAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T17:28:47.986Z"
+              "WhenOpened": "2026-04-03T17:38:20.436Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "F:\\CNPM\\WMSPro_fix\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "F:\\CNPM\\WMSPro_fix\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-03T17:34:59.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WmsModels.cs",
+              "DocumentMoniker": "F:\\CNPM\\WMSPro_fix\\Models\\WmsModels.cs",
+              "RelativeDocumentMoniker": "Models\\WmsModels.cs",
+              "ToolTip": "F:\\CNPM\\WMSPro_fix\\Models\\WmsModels.cs",
+              "RelativeToolTip": "Models\\WmsModels.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAIwHsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T17:28:47.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\WMSPro_fix\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "F:\\CNPM\\WMSPro_fix\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\WMSPro_fix\\Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\CNPM\\WMSPro_fix\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
