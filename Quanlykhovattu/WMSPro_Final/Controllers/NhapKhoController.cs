@@ -86,10 +86,18 @@ namespace WMSPro.Controllers
             var ncc = await _db.NhaCungCaps.FirstOrDefaultAsync(n => n.MaNhaCungCap == model.MaNhaCungCap);
             model.NhaCungCap = ncc?.TenNhaCungCap ?? model.NhaCungCap;
 
+            // Đảm bảo các field string không bị null (SQLite NOT NULL constraint)
+            model.GhiChu ??= "";
+            model.TenHang ??= "";
+            model.MaLo ??= "";
+            model.MaViTriGoiY ??= "";
+            model.NhaCungCap ??= "";
+            model.MaNhaCungCap ??= "";
+
             // Lưu người tạo
             var user = await _userMgr.GetUserAsync(User);
-            model.NguoiTaoId = user?.Id;
-            model.NguoiTaoHoTen = user?.HoTen;
+            model.NguoiTaoId = user?.Id ?? "";
+            model.NguoiTaoHoTen = user?.HoTen ?? "";
 
             _db.PhieuNhapKhos.Add(model);
 
