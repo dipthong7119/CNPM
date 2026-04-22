@@ -1,3 +1,30 @@
+// ── THEME TOGGLE ──
+function _saveTheme(value) {
+    try { localStorage.setItem('wms-theme', value); } catch (e) { /* Brave Shields có thể chặn localStorage trên localhost */ }
+}
+function _loadTheme() {
+    try { return localStorage.getItem('wms-theme'); } catch (e) { return null; }
+}
+
+function toggleTheme() {
+    var html = document.documentElement;
+    var isDark = html.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+        html.removeAttribute('data-theme');
+        _saveTheme('light');
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        _saveTheme('dark');
+    }
+    updateThemeIcon();
+}
+
+// Áp dụng theme đã lưu khi trang tải xong (backup phòng trường hợp script head chưa chạy)
+(function () {
+    var saved = _loadTheme();
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+})();
+
 // ── TOAST ──
 function showToast(msg, type = 'success') {
     const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
@@ -30,8 +57,19 @@ function filterTable(input) {
     });
 }
 
+// ── CẬP NHẬT ICON THEME ──
+function updateThemeIcon() {
+    var icon = document.getElementById('themeIcon');
+    if (!icon) return;
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    icon.textContent = isDark ? '☀️' : '🌙';
+}
+
 // ── GLOBAL SEARCH ──
 document.addEventListener('DOMContentLoaded', () => {
+    // Cập nhật icon theme khi trang load xong
+    updateThemeIcon();
+
     const gs = document.getElementById('globalSearch');
     if (gs) {
         gs.addEventListener('keydown', e => {

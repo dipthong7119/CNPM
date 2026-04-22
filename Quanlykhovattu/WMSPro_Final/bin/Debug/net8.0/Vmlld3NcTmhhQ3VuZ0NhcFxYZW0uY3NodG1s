@@ -1,5 +1,7 @@
 @model WMSPro.Models.NhaCungCap
-@{ ViewData["Title"] = "Chi tiết nhà cung cấp"; ViewData["SubTitle"] = Model.TenNhaCungCap; }
+@{
+    ViewData["Title"] = "Chi tiết nhà cung cấp"; ViewData["SubTitle"] = Model.TenNhaCungCap;
+}
 <div class="card" style="max-width:700px">
     <div class="card-header">
         <div class="card-title">🤝 @Model.TenNhaCungCap</div>
@@ -22,10 +24,10 @@
             <table class="table">
                 <thead><tr><th>Mã</th><th>Tên vật tư</th><th>Tồn kho</th><th>Loại</th></tr></thead>
                 <tbody>
-                @foreach (var vt in dsVt)
-                {
-                    <tr><td><a class="link" href="/VatTu/Xem/@vt.MaVatTu">@vt.MaVatTu</a></td><td>@vt.TenVatTu</td><td class="@(vt.TrangThai=="danger"?"text-danger":"text-green")">@vt.SoLuongTon</td><td>@vt.LoaiVatTu</td></tr>
-                }
+                    @foreach (var vt in dsVt)
+                    {
+                        <tr><td><a class="link" href="/VatTu/Xem/@vt.Id">@vt.MaVatTu</a></td><td>@vt.TenVatTu</td><td class="@(vt.TrangThai == "danger" ? "text-danger" : "text-green")">@vt.SoLuongTon</td><td>@vt.LoaiVatTu</td></tr>
+                    }
                 </tbody>
             </table>
         </div>

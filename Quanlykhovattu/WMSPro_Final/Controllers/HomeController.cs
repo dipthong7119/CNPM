@@ -27,8 +27,8 @@ namespace WMSPro.Controllers
             var vatTus = await _db.VatTus.ToListAsync();
 
             var hoatDong = phieuNhap
-                .Select(p => new HoatDongItem { SoPhieu = p.SoPhieu, LoaiPhieu = "Nhập", TenHang = p.TenHang, SoLuong = p.SlThucTe, TrangThai = p.TrangThai, NguoiTao = p.NguoiTaoHoTen ?? "" })
-                .Concat(phieuXuat.Select(p => new HoatDongItem { SoPhieu = p.SoPhieu, LoaiPhieu = "Xuất", TenHang = p.TenHang, SoLuong = -p.SlXuat, TrangThai = p.TrangThai, NguoiTao = p.NguoiTaoHoTen ?? "" }))
+                .Select(p => new HoatDongItem { Id = p.Id, SoPhieu = p.SoPhieu, LoaiPhieu = "Nhập", TenHang = p.TenHang, SoLuong = p.SlThucTe, TrangThai = p.TrangThai, NguoiTao = p.NguoiTaoHoTen ?? "" })
+                .Concat(phieuXuat.Select(p => new HoatDongItem { Id = p.Id, SoPhieu = p.SoPhieu, LoaiPhieu = "Xuất", TenHang = p.TenHang, SoLuong = -p.SlXuat, TrangThai = p.TrangThai, NguoiTao = p.NguoiTaoHoTen ?? "" }))
                 .OrderByDescending(x => x.SoPhieu).Take(10).ToList();
 
             var canhBao = vatTus

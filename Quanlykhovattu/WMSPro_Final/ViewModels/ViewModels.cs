@@ -71,6 +71,7 @@ namespace WMSPro.ViewModels
     // ─── Items phụ cho dashboard ───
     public class HoatDongItem
     {
+        public int Id { get; set; }
         public string SoPhieu { get; set; } = "";
         public string LoaiPhieu { get; set; } = "";
         public string TenHang { get; set; } = "";

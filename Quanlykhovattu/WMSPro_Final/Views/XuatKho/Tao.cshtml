@@ -28,10 +28,7 @@
                 <label class="form-label">Mã lô hàng</label>
                 <input class="form-input" asp-for="MaLo" id="maLo" placeholder="Nhập mã lô (VD: LOT-038)" />
             </div>
-            <div class="form-group">
-                <label class="form-label">Tồn kho hiện tại</label>
-                <input class="form-input" id="tonHienTai" value="—" readonly style="color:var(--accent);font-weight:700" />
-            </div>
+         
             <div class="form-group"><label class="form-label">Số lượng xuất *</label><input class="form-input" asp-for="SlXuat" type="number" min="1" value="0" /></div>
             <div class="form-group"><label class="form-label">Đối tác nhận hàng</label><input class="form-input" asp-for="DoiTac" placeholder="Tên khách hàng / đại lý" /></div>
             <div class="form-group"><label class="form-label">Bộ phận nhận</label><input class="form-input" asp-for="BoPhanNhan" placeholder="VD: Bộ phận Kinh doanh" /></div>

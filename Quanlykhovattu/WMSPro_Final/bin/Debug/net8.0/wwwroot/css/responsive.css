@@ -1,24 +1,27 @@
-/* ?? RESPONSIVE MOBILE DESIGN ?? */
+﻿/* ══════════════════════════════════════════
+   RESPONSIVE — WMSPro
+   Tablet ≤1024px | Mobile ≤768px | Phone ≤480px
+══════════════════════════════════════════ */
 
-/* Tablet (iPad Mini, iPad Air, Surface Pro 7) - 768px to 1024px */
+/* ── TABLET (iPad Mini, Air, Surface Pro) ── */
 @media (max-width: 1024px) {
     :root {
-        --sidebar-w: 180px;
+        --sidebar-w: 190px;
     }
 
     .stat-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .search-box {
-        width: 160px;
+    .dash-grid {
+        grid-template-columns: 1fr;
     }
 
     .form-grid {
         grid-template-columns: 1fr;
     }
 
-    .dash-grid {
+    .vitri-layout {
         grid-template-columns: 1fr;
     }
 
@@ -26,8 +29,8 @@
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
 
-    .vitri-layout {
-        grid-template-columns: 1fr;
+    .search-box {
+        width: 180px;
     }
 
     .page-actions-bar {
@@ -40,48 +43,67 @@
     }
 }
 
-/* Small Tablets (iPad Mini, iPhone Landscape) - 576px to 768px */
+/* ── MOBILE (≤768px) — sidebar chuyển thành bottom nav ── */
 @media (max-width: 768px) {
-    :root {
-        --sidebar-w: 70px;
-        --header-h: 60px;
+
+    /* === Reset layout chính === */
+    html, body {
+        height: auto !important;
+        min-height: 100%;
+        overflow: visible !important;
     }
 
     body {
-        height: auto;
-        flex-direction: column;
+        flex-direction: column !important;
+        padding-bottom: 64px;
     }
 
+    /* === SIDEBAR → BOTTOM NAV BAR === */
     .sidebar {
-        width: 100%;
-        height: auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        width: 100% !important;
+        height: 60px;
         flex-direction: row;
         border-right: none;
-        border-bottom: 1px solid var(--border);
+        border-top: 1px solid var(--border);
+        background: var(--bg2);
+        z-index: 1000;
+        overflow: hidden;
     }
 
     .sidebar-logo {
-        padding: 12px 16px;
-        flex-shrink: 0;
+        display: none;
     }
 
-    .logo-sub {
+    .sidebar-footer {
         display: none;
     }
 
     .sidebar-nav {
         display: flex;
+        flex-direction: row;
         flex: 1;
-        padding: 8px;
+        padding: 0;
         overflow-x: auto;
         overflow-y: hidden;
-        gap: 4px;
+        gap: 0;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
 
+        .sidebar-nav::-webkit-scrollbar {
+            display: none;
+        }
+
     .nav-section {
-        margin: 0;
         display: flex;
-        gap: 4px;
+        flex-direction: row;
+        margin: 0;
+        gap: 0;
         flex-shrink: 0;
     }
 
@@ -90,30 +112,49 @@
     }
 
     .nav-item {
-        padding: 6px 8px;
-        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 10px;
+        font-size: 9px;
+        gap: 2px;
+        border-radius: 0;
         white-space: nowrap;
         flex-shrink: 0;
+        min-width: 56px;
+        height: 60px;
+        border-bottom: none !important;
     }
+
+        .nav-item.active {
+            border-bottom: 3px solid var(--accent) !important;
+            border-radius: 0;
+        }
 
     .nav-icon {
-        font-size: 14px;
+        font-size: 18px;
+        width: auto;
+        margin: 0;
     }
 
-    .sidebar-footer {
-        display: none;
-    }
-
+    /* === MAIN: scroll tự nhiên === */
     .main {
         flex: 1;
-        overflow: auto;
+        overflow: visible !important;
+        height: auto !important;
     }
 
+    /* === TOPBAR === */
     .topbar {
-        height: var(--header-h);
-        padding: 0 14px;
-        gap: 8px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        height: auto;
+        min-height: 56px;
+        padding: 10px 14px;
         flex-wrap: wrap;
+        gap: 8px;
     }
 
     .page-title {
@@ -121,37 +162,40 @@
     }
 
     .page-sub {
-        font-size: 10px;
         display: none;
     }
 
     .topbar-actions {
-        gap: 6px;
-        order: 3;
         width: 100%;
+        gap: 8px;
         margin-left: 0;
-        margin-top: 8px;
+        flex-wrap: wrap;
     }
 
     .search-box {
-        width: 100%;
         flex: 1;
+        width: auto;
         min-width: 0;
     }
 
-    .icon-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-
+    /* === CONTENT: scroll toàn trang === */
     .content {
+        overflow: visible !important;
+        height: auto !important;
         padding: 14px;
     }
 
+    /* === CARDS & FORMS === */
     .card {
         padding: 14px;
         border-radius: 10px;
+        margin-bottom: 12px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 
     .stat-grid {
@@ -165,10 +209,6 @@
 
     .stat-val {
         font-size: 20px;
-    }
-
-    .stat-label {
-        font-size: 10px;
     }
 
     .stat-icon {
@@ -184,33 +224,53 @@
     .form-actions {
         padding: 10px 14px;
         gap: 8px;
+        flex-wrap: wrap;
     }
 
     .btn {
-        padding: 6px 12px;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .btn-sm {
+        padding: 5px 10px;
         font-size: 12px;
     }
 
+    /* === TABLE scroll ngang === */
     .table {
         font-size: 12px;
     }
 
-    .table th, .table td {
-        padding: 8px;
-    }
+        .table th {
+            padding: 8px 6px;
+            font-size: 10px;
+        }
+
+        .table td {
+            padding: 8px 6px;
+        }
 
     .action-btns {
         gap: 4px;
     }
 
     .btn-icon {
-        width: 24px;
-        height: 24px;
-        font-size: 12px;
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
     }
 
+    .card > .table,
+    .card > div > .table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* === STOCK GRID === */
     .stock-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
         gap: 10px;
     }
 
@@ -218,25 +278,17 @@
         padding: 12px;
     }
 
-    .stock-card-qty {
-        font-size: 20px;
-    }
-
-    .warehouse-map {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .vitri-layout {
-        grid-template-columns: 1fr;
-    }
-
+    /* === PAGE ACTIONS === */
     .page-actions-bar {
         flex-direction: column;
         align-items: stretch;
+        gap: 8px;
+        margin-bottom: 12px;
     }
 
     .filter-row {
         width: 100%;
+        flex-wrap: wrap;
     }
 
     .chip {
@@ -244,6 +296,7 @@
         padding: 5px 10px;
     }
 
+    /* === DETAIL VIEW === */
     .detail-grid {
         padding: 12px 14px;
     }
@@ -258,26 +311,22 @@
         min-width: auto;
     }
 
-    .toast {
-        max-width: 280px;
-        font-size: 12px;
-        padding: 10px 12px;
-    }
-
+    /* === TOAST (trên bottom nav) === */
     .toast-container {
-        bottom: 10px;
+        bottom: 70px;
         right: 10px;
         gap: 6px;
     }
 
+    .toast {
+        max-width: calc(100vw - 24px);
+        font-size: 12px;
+    }
+
+    /* === ALERTS === */
     .alert-item {
         gap: 8px;
         padding: 8px 10px;
-        margin-bottom: 6px;
-    }
-
-    .alert-icon {
-        font-size: 14px;
     }
 
     .alert-title {
@@ -290,137 +339,64 @@
 
     .alert-time {
         font-size: 9px;
+        white-space: normal;
+    }
+
+    .vitri-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .warehouse-map {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .dash-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .icon-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
     }
 }
 
-/* Mobile Phones (iPhone SE, iPhone 12 Pro, Pixel 7) - 375px to 576px */
-@media (max-width: 576px) {
-    :root {
-        --sidebar-w: 100%;
-        --header-h: 56px;
-        font-size: 13px;
-    }
-
+/* ── PHONE (≤480px) ── */
+@media (max-width: 480px) {
     body {
         font-size: 13px;
     }
 
-    .sidebar {
-        width: 100%;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-    .sidebar-logo {
-        padding: 10px 12px;
-    }
-
-    .logo-icon {
-        width: 28px;
-        height: 28px;
-        font-size: 14px;
-    }
-
-    .sidebar-nav {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    .nav-item {
-        padding: 5px 6px;
-        font-size: 11px;
-        gap: 5px;
-    }
-
-    .nav-icon {
-        font-size: 13px;
-        width: 16px;
-    }
-
     .topbar {
-        height: var(--header-h);
-        padding: 0 10px;
-        gap: 6px;
+        padding: 8px 10px;
+        min-height: 52px;
     }
 
     .page-title {
         font-size: 14px;
     }
 
-    .topbar-actions {
-        flex-wrap: wrap;
-        gap: 5px;
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .search-box {
-        width: 100%;
-        padding: 5px 8px;
-        gap: 5px;
-    }
-
-    .search-box input {
-        font-size: 12px;
-    }
-
-    .icon-btn {
-        width: 28px;
-        height: 28px;
-        font-size: 13px;
-    }
-
     .content {
         padding: 10px;
-        overflow-y: auto;
     }
 
     .card {
         padding: 12px;
-        margin-bottom: 12px;
         border-radius: 8px;
-    }
-
-    .card-header {
-        margin-bottom: 10px;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .stat-grid {
         grid-template-columns: 1fr;
         gap: 8px;
-        margin-bottom: 12px;
-    }
-
-    .stat-card {
-        padding: 10px;
-        margin-bottom: 0;
     }
 
     .stat-val {
         font-size: 18px;
     }
 
-    .stat-label {
-        font-size: 9px;
-    }
-
-    .stat-sub {
-        font-size: 9px;
-    }
-
-    .stat-icon {
-        font-size: 18px;
-        right: 8px;
-        top: 8px;
-    }
-
     .form-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
         padding: 12px;
+        gap: 10px;
     }
 
     .form-label {
@@ -428,54 +404,36 @@
     }
 
     .form-input, .form-select {
-        padding: 6px 8px;
-        font-size: 12px;
+        padding: 7px 10px;
+        font-size: 13px;
     }
 
     .form-actions {
-        padding: 10px 12px;
-        gap: 6px;
         flex-direction: column;
+        padding: 10px 12px;
     }
 
     .btn {
-        padding: 8px 12px;
-        font-size: 11px;
         width: 100%;
         justify-content: center;
-    }
-
-    .btn-sm {
-        padding: 4px 8px;
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .table {
         font-size: 11px;
     }
 
-    .table th {
-        padding: 6px 6px;
-        font-size: 9px;
-    }
+        .table th {
+            font-size: 9px;
+            padding: 6px 4px;
+        }
 
-    .table td {
-        padding: 6px;
-    }
-
-    .action-btns {
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .btn-icon {
-        width: 28px;
-        height: 28px;
-        font-size: 11px;
-    }
+        .table td {
+            padding: 6px 4px;
+        }
 
     .stock-grid {
-        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 8px;
     }
 
@@ -483,21 +441,8 @@
         padding: 10px;
     }
 
-    .stock-card-code {
-        font-size: 9px;
-    }
-
-    .stock-card-name {
-        font-size: 11px;
-    }
-
     .stock-card-qty {
-        font-size: 16px;
-        margin-bottom: 6px;
-    }
-
-    .stock-card-unit {
-        font-size: 11px;
+        font-size: 18px;
     }
 
     .warehouse-map {
@@ -506,63 +451,15 @@
     }
 
     .shelf-cell {
-        font-size: 10px;
-    }
-
-    .vitri-layout {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .vitri-map-card {
-        max-height: calc(100vh - 200px);
-    }
-
-    .shelf-label {
-        font-size: 10px;
-        margin-bottom: 8px;
-    }
-
-    .legend-row {
-        gap: 5px;
-        margin-bottom: 8px;
-    }
-
-    .legend-cell {
-        padding: 2px 6px;
-        font-size: 10px;
-    }
-
-    .page-actions-bar {
-        flex-direction: column;
-        gap: 8px;
-        margin-bottom: 12px;
-    }
-
-    .filter-row {
-        width: 100%;
-        gap: 4px;
+        font-size: 9px;
     }
 
     .chip {
         padding: 4px 8px;
         font-size: 10px;
-        flex: 1;
-        justify-content: center;
-    }
-
-    .detail-grid {
-        padding: 10px 12px;
-    }
-
-    .detail-row {
-        flex-direction: column;
-        gap: 3px;
-        padding: 6px 0;
     }
 
     .detail-label {
-        min-width: auto;
         font-size: 11px;
     }
 
@@ -575,38 +472,14 @@
         font-size: 10px;
     }
 
-    .toast {
-        max-width: calc(100vw - 20px);
-        font-size: 11px;
-        padding: 8px 10px;
-    }
-
-    .toast-container {
-        bottom: 8px;
-        right: 8px;
-        gap: 4px;
-    }
-
-    .alert-item {
-        gap: 6px;
-        padding: 6px 8px;
-    }
-
-    .alert-icon {
-        font-size: 13px;
-    }
-
-    .alert-title {
-        font-size: 11px;
-    }
-
-    .alert-desc {
-        font-size: 10px;
-    }
-
-    .alert-time {
+    .nav-item {
+        min-width: 50px;
+        padding: 4px 6px;
         font-size: 8px;
-        white-space: normal;
+    }
+
+    .nav-icon {
+        font-size: 16px;
     }
 
     .info-box {
@@ -615,40 +488,22 @@
     }
 }
 
-/* Small Phones (iPhone SE, Pixel 4a) - Below 375px */
+/* ── SMALL PHONE (≤375px) ── */
 @media (max-width: 375px) {
-    :root {
-        font-size: 12px;
-    }
-
     body {
         font-size: 12px;
-    }
-
-    .page-title {
-        font-size: 13px;
-    }
-
-    .stat-grid {
-        gap: 6px;
     }
 
     .stat-val {
         font-size: 16px;
     }
 
-    .stat-label {
-        font-size: 8px;
-    }
-
     .form-input, .form-select {
-        padding: 5px 6px;
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .btn {
-        padding: 6px 10px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .table th {
@@ -656,37 +511,27 @@
     }
 
     .table td {
-        padding: 4px;
+        padding: 4px 3px;
     }
 
     .stock-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .stock-card-qty {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .warehouse-map {
         grid-template-columns: repeat(2, 1fr);
-        gap: 3px;
     }
 
-    .chip {
-        padding: 3px 6px;
-        font-size: 9px;
+    .nav-item {
+        min-width: 46px;
+        font-size: 7px;
     }
 
-    .detail-label {
-        font-size: 10px;
-    }
-
-    .detail-val {
-        font-size: 12px;
-    }
-
-    .badge {
-        padding: 1px 4px;
-        font-size: 9px;
+    .nav-icon {
+        font-size: 15px;
     }
 }

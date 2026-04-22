@@ -9,161 +9,161 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WMSPro
 build_property.RootNamespace = WMSPro
-build_property.ProjectDir = E:\CNPM\Quanlykhovattu\WMSPro_Final\
+build_property.ProjectDir = D:\WMSPro_Final(fix11 lần)\WMSPro_Final\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\CNPM\Quanlykhovattu\WMSPro_Final
+build_property.MSBuildProjectDirectory = D:\WMSPro_Final(fix11 lần)\WMSPro_Final
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/Account/AccessDenied.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/Account/DoiMatKhau.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/Account/DoiMatKhau.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEb2lNYXRLaGF1LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/Account/Login.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/BaoCao/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/BaoCao/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvQ2FvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/CanhBao/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/CanhBao/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuaEJhb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/Home/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NguoiDung/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NguoiDung/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmd1b2lEdW5nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NguoiDung/Sua.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NguoiDung/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmd1b2lEdW5nXFN1YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NguoiDung/Tao.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NguoiDung/Tao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmd1b2lEdW5nXFRhby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NhaCungCap/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NhaCungCap/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NhaCungCap/Sua.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NhaCungCap/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxTdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NhaCungCap/Tao.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NhaCungCap/Tao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxUYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NhaCungCap/Xem.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NhaCungCap/Xem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxYZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NhaCungCap/_placeholder.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NhaCungCap/_placeholder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxfcGxhY2Vob2xkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NhapKho/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NhapKho/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhcEtob1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NhapKho/Sua.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NhapKho/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhcEtob1xTdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NhapKho/Tao.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NhapKho/Tao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhcEtob1xUYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/NhapKho/Xem.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/NhapKho/Xem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhcEtob1xYZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/QuanLyKho/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/QuanLyKho/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVhbkx5S2hvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/QuanLyKho/Sua.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/QuanLyKho/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVhbkx5S2hvXFN1YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/QuanLyKho/Tao.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/QuanLyKho/Tao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVhbkx5S2hvXFRhby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/Shared/_Layout.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/TonKho/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/TonKho/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9uS2hvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/VatTu/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/VatTu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmF0VHVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/VatTu/Sua.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/VatTu/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmF0VHVcU3VhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/VatTu/Tao.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/VatTu/Tao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmF0VHVcVGFvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/VatTu/Xem.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/VatTu/Xem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmF0VHVcWGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/ViTriKho/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/ViTriKho/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlUcmlLaG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/ViTriKho/Sua.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/ViTriKho/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlUcmlLaG9cU3VhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/ViTriKho/Tao.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/ViTriKho/Tao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlUcmlLaG9cVGFvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/XuatKho/Index.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/XuatKho/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWHVhdEtob1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/XuatKho/Sua.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/XuatKho/Sua.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWHVhdEtob1xTdWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/XuatKho/Tao.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/XuatKho/Tao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWHVhdEtob1xUYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/XuatKho/Xem.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/XuatKho/Xem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWHVhdEtob1xYZW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/_ViewImports.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CNPM/Quanlykhovattu/WMSPro_Final/Views/_ViewStart.cshtml]
+[D:/WMSPro_Final(fix11 lần)/WMSPro_Final/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

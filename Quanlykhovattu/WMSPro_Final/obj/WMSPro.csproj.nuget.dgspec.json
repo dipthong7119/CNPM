@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\CNPM\\Quanlykhovattu\\WMSPro_Final\\WMSPro.csproj": {}
+    "D:\\WMSPro_Final(fix11 lần)\\WMSPro_Final\\WMSPro.csproj": {}
   },
   "projects": {
-    "E:\\CNPM\\Quanlykhovattu\\WMSPro_Final\\WMSPro.csproj": {
+    "D:\\WMSPro_Final(fix11 lần)\\WMSPro_Final\\WMSPro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CNPM\\Quanlykhovattu\\WMSPro_Final\\WMSPro.csproj",
+        "projectUniqueName": "D:\\WMSPro_Final(fix11 lần)\\WMSPro_Final\\WMSPro.csproj",
         "projectName": "WMSPro",
-        "projectPath": "E:\\CNPM\\Quanlykhovattu\\WMSPro_Final\\WMSPro.csproj",
+        "projectPath": "D:\\WMSPro_Final(fix11 lần)\\WMSPro_Final\\WMSPro.csproj",
         "packagesPath": "C:\\Users\\Dipthong\\.nuget\\packages\\",
-        "outputPath": "E:\\CNPM\\Quanlykhovattu\\WMSPro_Final\\obj\\",
+        "outputPath": "D:\\WMSPro_Final(fix11 lần)\\WMSPro_Final\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

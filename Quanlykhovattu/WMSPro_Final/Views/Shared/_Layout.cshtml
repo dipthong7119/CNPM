@@ -23,6 +23,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="~/css/wms.css" />
 <link rel="stylesheet" href="~/css/responsive.css" />
+<script>
+    // Áp dụng theme ngay khi tải trang (trước khi render) để tránh nhấp nháy
+    (function () {
+        try {
+            var saved = localStorage.getItem('wms-theme');
+            if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        } catch (e) { /* Brave Shields có thể chặn localStorage */ }
+    })();
+</script>
 </head>
 <body>
 
@@ -144,6 +153,9 @@
                 <span>🔍</span>
                 <input type="text" id="globalSearch" placeholder="Tìm kiếm hàng hóa, phiếu..." />
             </div>
+                <button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+                    <span id="themeIcon">🌙</span>
+                </button>
             <div class="icon-btn" title="Cảnh báo tồn kho" onclick="location.href='/CanhBao/Index'">🔔</div>
             @if (isAdmin)
             {
@@ -170,6 +182,7 @@
 .alert-error{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:#ef4444;padding:12px 16px;border-radius:10px;margin-bottom:16px;font-size:14px;}
 </style>
 
+<script src="~/js/wms.js"></script>
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

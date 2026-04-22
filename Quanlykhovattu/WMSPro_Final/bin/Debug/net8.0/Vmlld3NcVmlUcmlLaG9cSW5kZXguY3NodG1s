@@ -92,8 +92,8 @@
                     <td>@vt.MatHang</td>
                     <td>
                         <div class="action-btns">
-                            <a class="btn-icon" href="/ViTriKho/Sua/@vt.MaViTri" title="Sửa">✏️</a>
-                            <form method="post" action="/ViTriKho/Xoa/@vt.MaViTri" style="display:inline"
+                                <a class="btn-icon" href="/ViTriKho/Sua/@vt.Id" title="Sửa">✏️</a>
+                                <form method="post" action="/ViTriKho/Xoa/@vt.Id" style="display:inline"
                                   onsubmit="return confirm('Xóa vị trí @vt.MaViTri?')">
                                 <button type="submit" class="btn-icon btn-icon-danger" title="Xóa">🗑️</button>
                             </form>

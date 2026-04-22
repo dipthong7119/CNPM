@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 namespace WMSPro.Models
 {
     public class VatTu
@@ -41,7 +41,8 @@ namespace WMSPro.Models
         public string SoSeri { get; set; } = "";
 
         // Không lưu vào DB - tính toán
+        [NotMapped]
         public string TrangThai => SoLuongTon <= 0 ? "danger"
-            : SoLuongTon <= MucTonToiThieu ? "warning" : "normal";
+    : SoLuongTon <= MucTonToiThieu ? "warning" : "normal";
     }
 }

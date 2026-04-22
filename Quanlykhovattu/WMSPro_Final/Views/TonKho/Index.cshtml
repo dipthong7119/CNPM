@@ -7,8 +7,8 @@
 <div class="page-actions-bar">
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
         <div class="filter-row">
-            <a href="/TonKho" class="chip @(filter=="tat-ca"?"active":"")">🔷 Lưới</a>
-            <a href="/TonKho?filter=sap-het" class="chip @(filter=="sap-het"?"active":"")">⚠️ Sắp hết</a>
+            <a href="/TonKho" class="chip @(filter == "tat-ca" ? "active" : "")">🔷 Lưới</a>
+            <a href="/TonKho?filter=sap-het" class="chip @(filter == "sap-het" ? "active" : "")">⚠️ Sắp hết</a>
             <a href="/TonKho?filter=tat-ca" class="chip">🔄 Tất cả</a>
         </div>
         <form method="get" style="display:flex;gap:6px">
@@ -37,13 +37,21 @@
                 <div class="stock-progress-bar @item.TrangThai" style="width:@pct%"></div>
             </div>
             @if (item.TrangThai == "danger")
-            { <div class="stock-card-alert danger">⚠️ Dưới mức tối thiểu (@item.MucTonToiThieu)</div> }
+            {
+                <div class="stock-card-alert danger">⚠️ Dưới mức tối thiểu (@item.MucTonToiThieu)</div>
+            }
             else if (item.TrangThai == "warning")
-            { <div class="stock-card-alert warning">⚡ Sắp đạt mức tối thiểu</div> }
+            {
+
+                <div class="stock-card-alert warning">⚡ Sắp đạt mức tối thiểu</div>
+            }
             else
-            { <div class="stock-card-info">📍 @item.MaViTri · Lô: @item.MaLo</div> }
+            {
+
+                <div class="stock-card-info">📍 @item.MaViTri · Lô: @item.MaLo</div>
+            }
             <div style="margin-top:10px;display:flex;gap:6px">
-                <a href="/VatTu/Xem/@item.MaVatTu" class="btn btn-secondary btn-sm" style="flex:1;justify-content:center">👁️ Xem</a>
+                <a href="/VatTu/Xem/@item.Id" class="btn btn-secondary btn-sm" style="flex:1;justify-content:center">👁️ Xem</a>
                 <a href="/NhapKho/Tao" class="btn btn-primary btn-sm" style="flex:1;justify-content:center">+ Nhập</a>
             </div>
         </div>
